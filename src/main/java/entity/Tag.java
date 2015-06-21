@@ -1,6 +1,6 @@
 package entity;
 
-public class Tag {
+public class Tag implements Entity {
 
 	private Integer tagId;
 	private String tagName;

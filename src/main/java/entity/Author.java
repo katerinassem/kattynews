@@ -2,7 +2,7 @@ package entity;
 
 import java.util.Date;
 
-public class Author {
+public class Author implements Entity {
 
 	private Integer authorID;
 	private String authorName;

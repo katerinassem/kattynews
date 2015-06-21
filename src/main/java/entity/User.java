@@ -1,6 +1,6 @@
 package entity;
 
-public class User {
+public class User implements Entity {
 
 	private Integer userId;
 	private String userName;

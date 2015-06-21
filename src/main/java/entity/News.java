@@ -2,7 +2,7 @@ package entity;
 
 import java.util.Date;
 
-public class News {
+public class News implements Entity {
 
 	private Integer newsID;
 	private String shortText;

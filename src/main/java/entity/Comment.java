@@ -2,7 +2,7 @@ package entity;
 
 import java.util.Date;
 
-public class Comment {
+public class Comment implements Entity {
 
 	private Integer commentId;
 	private News news;
