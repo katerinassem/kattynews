@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class News implements Entity {
 
+	private static final long serialVersionUID = -93255043726172454L;
+	
 	private Integer newsID;
 	private String shortText;
 	private String fullText;

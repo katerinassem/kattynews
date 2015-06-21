@@ -2,6 +2,8 @@ package entity;
 
 public class Tag implements Entity {
 
+	private static final long serialVersionUID = -8637226865173147234L;
+	
 	private Integer tagId;
 	private String tagName;
 	

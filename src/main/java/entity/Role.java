@@ -2,6 +2,8 @@ package entity;
 
 public class Role implements Entity {
 
+	private static final long serialVersionUID = -8904794364882651716L;
+	
 	private User user;
 	private String roleName;
 	

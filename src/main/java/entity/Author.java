@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class Author implements Entity {
 
+	private static final long serialVersionUID = -7243301813176190519L;
+	
 	private Integer authorID;
 	private String authorName;
 	private Date expired;

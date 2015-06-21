@@ -2,9 +2,12 @@ package persistance.oracle.clause;
 
 import java.util.List;
 
+import org.apache.commons.collections4.CollectionUtils;
+
 import persistance.oracle.query.OracleExecutableQuery;
 import util.sql.OrderingType;
 import util.sql.clause.IOrderByClause;
+import util.sql.exception.QueryBuilderBadArgumentsException;
 import util.sql.query.IExecutableQuery;
 
 public class OracleOrderByClause extends OracleExecutableQuery implements IOrderByClause {
@@ -14,9 +17,15 @@ public class OracleOrderByClause extends OracleExecutableQuery implements IOrder
 	}
 
 	public IExecutableQuery orderBy(List<String> columnNames,
-			List<OrderingType> orderingTypes) {
+			List<OrderingType> orderingTypes) throws QueryBuilderBadArgumentsException {
 		
 //TODO: BAAAAAAAAAAAAAAAAAAD!!!
+		
+		if(CollectionUtils.isEmpty(columnNames)
+				|| CollectionUtils.isEmpty(orderingTypes)
+				|| columnNames.size() != orderingTypes.size()){
+			throw new QueryBuilderBadArgumentsException();
+		}
 		
 		if(columnNames != null && columnNames.size() > 0){
 			this.sql.append(" ORDER BY ");

@@ -1,8 +1,11 @@
 package persistance.oracle.clause;
 
+import org.apache.commons.lang3.StringUtils;
+
 import persistance.oracle.query.OracleExecutableQuery;
 import util.sql.ComparisonSignType;
 import util.sql.clause.IConditionClause;
+import util.sql.exception.QueryBuilderBadArgumentsException;
 
 public class OracleConditionClause extends OracleExecutableQuery implements IConditionClause {
 
@@ -11,8 +14,12 @@ public class OracleConditionClause extends OracleExecutableQuery implements ICon
 	}
 
 	public IConditionClause or(String columnName,
-			ComparisonSignType comparisonSignType, String value) {
+			ComparisonSignType comparisonSignType, String value) throws QueryBuilderBadArgumentsException {
 		
+		if(StringUtils.isEmpty(columnName) 
+				|| StringUtils.isEmpty(value)){
+			throw new QueryBuilderBadArgumentsException();
+		}
 		this.sql.append(" OR ").append(columnName)
 			.append(comparisonSignType)
 			.append(value);
@@ -20,8 +27,12 @@ public class OracleConditionClause extends OracleExecutableQuery implements ICon
 	}
 
 	public IConditionClause and(String columnName,
-			ComparisonSignType comparisonSignType, String value) {
-		
+			ComparisonSignType comparisonSignType, String value) throws QueryBuilderBadArgumentsException {
+
+		if(StringUtils.isEmpty(columnName) 
+				|| StringUtils.isEmpty(value)){
+			throw new QueryBuilderBadArgumentsException();
+		}
 		this.sql.append(" AND ").append(columnName)
 			.append(comparisonSignType)
 			.append(value);

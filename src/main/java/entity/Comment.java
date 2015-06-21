@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class Comment implements Entity {
 
+	private static final long serialVersionUID = -8141265742635991142L;
+	
 	private Integer commentId;
 	private News news;
 	private String commentText;

@@ -2,6 +2,8 @@ package entity;
 
 public class User implements Entity {
 
+	private static final long serialVersionUID = -1545910345167467988L;
+	
 	private Integer userId;
 	private String userName;
 	private String login;
