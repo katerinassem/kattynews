@@ -2,5 +2,5 @@ package util.sql.query;
 
 public interface IExecutableQuery {
 
-	String getQuery();
+	public String getQuery();
 }

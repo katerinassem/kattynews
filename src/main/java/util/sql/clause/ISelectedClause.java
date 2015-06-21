@@ -1,7 +1,8 @@
 package util.sql.clause;
 
-public interface ISelectedClause extends IWhereClause {
+import util.sql.ComparisonSignType;
 
-	ISelectedClause orderBy(String columnName);
-	ISelectedClause groupBy(String columnName);
+public interface ISelectedClause extends IWhereClause, IGroupByClause, IOrderByClause {
+
+	ISelectedWhereClause where(String columnName, ComparisonSignType comparisonSignType, String value);
 }
