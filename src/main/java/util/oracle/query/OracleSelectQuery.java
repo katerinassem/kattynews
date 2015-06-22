@@ -1,11 +1,11 @@
-package persistance.oracle.query;
+package util.oracle.query;
 
 import java.util.List;
 
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import persistance.oracle.clause.OracleSelectedClause;
+import util.oracle.clause.OracleSelectedClause;
 import util.sql.clause.ISelectedClause;
 import util.sql.exception.QueryBuilderBadArgumentsException;
 import util.sql.query.ISelectQuery;

@@ -1,8 +1,8 @@
-package persistance.oracle.clause;
+package util.oracle.clause;
 
 import org.apache.commons.lang3.StringUtils;
 
-import persistance.oracle.query.OracleExecutableQuery;
+import util.oracle.query.OracleExecutableQuery;
 import util.sql.ComparisonSignType;
 import util.sql.clause.IConditionClause;
 import util.sql.clause.IWhereClause;

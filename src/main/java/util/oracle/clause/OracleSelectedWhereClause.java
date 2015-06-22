@@ -1,42 +1,41 @@
-package persistance.oracle.clause;
+package util.oracle.clause;
 
 import org.apache.commons.lang3.StringUtils;
 
-import persistance.oracle.query.OracleExecutableQuery;
 import util.sql.ComparisonSignType;
-import util.sql.clause.IConditionClause;
+import util.sql.clause.ISelectedWhereClause;
 import util.sql.exception.QueryBuilderBadArgumentsException;
 
-public class OracleConditionClause extends OracleExecutableQuery implements IConditionClause {
+public class OracleSelectedWhereClause extends OracleSelectedClause implements ISelectedWhereClause {
 
-	public OracleConditionClause(StringBuilder sql) {
+	public OracleSelectedWhereClause(StringBuilder sql) {
 		super(sql);
 	}
 
-	public IConditionClause or(String columnName,
+	public ISelectedWhereClause or(String columnName,
 			ComparisonSignType comparisonSignType, String value) throws QueryBuilderBadArgumentsException {
-		
-		if(StringUtils.isEmpty(columnName) 
+
+		if(StringUtils.isEmpty(columnName)
 				|| StringUtils.isEmpty(value)){
 			throw new QueryBuilderBadArgumentsException();
 		}
 		this.sql.append(" OR ").append(columnName)
 			.append(comparisonSignType)
 			.append(value);
-		return new OracleConditionClause(this.sql);
+		return new OracleSelectedWhereClause(this.sql);
 	}
 
-	public IConditionClause and(String columnName,
+	public ISelectedWhereClause and(String columnName,
 			ComparisonSignType comparisonSignType, String value) throws QueryBuilderBadArgumentsException {
 
-		if(StringUtils.isEmpty(columnName) 
+		if(StringUtils.isEmpty(columnName)
 				|| StringUtils.isEmpty(value)){
 			throw new QueryBuilderBadArgumentsException();
 		}
 		this.sql.append(" AND ").append(columnName)
-			.append(comparisonSignType)
+			.append(comparisonSignType)	
 			.append(value);
-		return  new OracleConditionClause(this.sql);
+		return  new OracleSelectedWhereClause(this.sql);
 	}
 
 }

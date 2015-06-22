@@ -1,11 +1,11 @@
-package persistance.oracle.query;
+package util.oracle.query;
 
 import java.util.List;
 
 import org.apache.commons.collections4.CollectionUtils;
 
-import persistance.oracle.clause.OracleWhereClause;
 
+import util.oracle.clause.OracleWhereClause;
 import util.sql.exception.QueryBuilderBadArgumentsException;
 import util.sql.query.IExecutableQuery;
 import util.sql.query.ISimpleInsertQuery;

@@ -1,10 +1,10 @@
-package persistance.oracle;
+package util.oracle;
 
 import org.apache.commons.lang3.StringUtils;
-import persistance.oracle.clause.OracleWhereClause;
-import persistance.oracle.query.OracleInsertQuery;
-import persistance.oracle.query.OracleSelectQuery;
-import persistance.oracle.query.OracleUpdateQuery;
+import util.oracle.clause.OracleWhereClause;
+import util.oracle.query.OracleInsertQuery;
+import util.oracle.query.OracleSelectQuery;
+import util.oracle.query.OracleUpdateQuery;
 import util.sql.QueryBuilder;
 import util.sql.clause.IWhereClause;
 import util.sql.exception.QueryBuilderBadArgumentsException;

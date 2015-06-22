@@ -1,4 +1,4 @@
-package persistance.oracle.query;
+package util.oracle.query;
 
 public abstract class AbstractQuery {
 	

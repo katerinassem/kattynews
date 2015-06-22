@@ -5,6 +5,8 @@ import java.util.Arrays;
 import junit.framework.Assert;
 
 import org.junit.Test;
+
+import util.oracle.OracleQueryBuilder;
 import util.sql.ComparisonSignType;
 import util.sql.OrderingType;
 import util.sql.exception.QueryBuilderBadArgumentsException;

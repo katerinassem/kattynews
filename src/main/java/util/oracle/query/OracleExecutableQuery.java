@@ -1,4 +1,4 @@
-package persistance.oracle.query;
+package util.oracle.query;
 
 import util.sql.query.IExecutableQuery;
 

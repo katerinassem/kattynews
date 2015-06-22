@@ -1,10 +1,10 @@
-package persistance.oracle.clause;
+package util.oracle.clause;
 
 import java.util.List;
 
 import org.apache.commons.collections4.CollectionUtils;
 
-import persistance.oracle.query.OracleExecutableQuery;
+import util.oracle.query.OracleExecutableQuery;
 import util.sql.OrderingType;
 import util.sql.clause.IOrderByClause;
 import util.sql.exception.QueryBuilderBadArgumentsException;
